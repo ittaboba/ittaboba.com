@@ -1,0 +1,35 @@
+
+.Text {
+    max-width: 680px;
+    margin:auto;
+    margin-bottom: 30px;
+}
+
+.Content {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    resize: none;
+    font-family: 'freight-text-pro','Merriweather',Georgia, 'Cambria' ,'Times New Roman', Times, serif;
+    color: #4a4a4a;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.InfiniteCarousel {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .InfiniteCarousel {
+        margin-bottom: 30px;
+    }
+}
+
+.CarouselItem {
+    border-radius: 1em;
+    overflow: hidden;
+}

@@ -1,0 +1,58 @@
+
+.ContactsContainer {
+    margin-bottom: 60px;
+}
+
+.Img {
+    width: 240px;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+}
+
+@media (min-width: 992px) {
+    .Img {
+        margin-top: 30px;
+    }
+
+    .ContactsContainer {
+        margin-bottom: 140px;
+    }
+
+    .ContactsRow {
+        margin-top: 65px;
+    }
+}
+
+.SocialButton {
+    height: 48px;
+    width: 48px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 24px;
+    text-decoration: none;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.icon-facebook, .icon-twitter, .icon-linkedin, .icon-instagram, .icon-github-circled {
+    font-size: 22px;
+    text-align: center;
+    line-height: 48px;
+    text-decoration: none;
+    color: #202020;
+}
+
+.SocialButton:hover {
+    background-color: #202020;
+}
+
+.icon-facebook:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-instagram:hover, .icon-github-circled:hover {
+    color:white;
+    text-decoration: none;
+}
+

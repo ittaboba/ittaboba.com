@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    .ProjectsContainer {
+        margin-bottom: 200px;
+    }
+}
+
+.ProjectsContainer {
+    min-height: 200px;
+}

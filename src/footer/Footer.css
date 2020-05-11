@@ -1,0 +1,93 @@
+
+.FooterArea {
+    background-color: black;
+    height: 201px;
+    width: 100%;
+}
+
+.FooterSiteSectionArea {
+    text-align: center;
+}
+
+.FooterArea a:hover {
+    color: white;
+}
+
+.BannerAreaLink {
+    font-size: 16px;
+    color: white;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+@media (max-width: 576px) { 
+    .FooterArea {
+        height: 362px;
+    }
+
+    .FollowOn {
+        margin-top: 20px;
+    }
+
+    .LegalBanner {
+        margin-bottom: 10px;
+    }
+}
+
+.FollowOn {
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: "Helvetica Neue";
+}
+
+.LegalBanner {
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 320px) {
+    .LegalBanner {
+      font-size: 9px;
+    }
+}
+
+.LegalBanner a {
+    color: white;
+    text-decoration: underline;
+}
+
+.LegalBanner a:hover {
+    color: white;
+}
+
+.FooterArea .SocialArea a {
+    margin: 10px 10px;
+}
+
+.FooterArea .SocialButton {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.FooterArea .icon-facebook, .FooterArea .icon-twitter, .FooterArea .icon-linkedin, .FooterArea .icon-instagram, .FooterArea .icon-github-circled {
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: #202020;
+}
+
+.SocialButton:hover {
+    background-color: #202020;
+}
+
+.icon-facebook:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-instagram:hover, .icon-github-circled:hover {
+    color:white;
+    text-decoration: none;
+}

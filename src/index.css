@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.Title {
+  font-size: 4em;
+  color: #202020;
+  margin-bottom: 25px;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .Title {
+    font-size: 5em;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Title {
+    font-size: 6em;
+  }
+}
+
+
+/*
+  Bootstrap customizations
+*/
+.form-control {
+  border-radius: 19px !important;
+}
+
+.form-control:focus {
+  border-color: #ced4da !important;
+  box-shadow: none !important;
+}
+
+.navbar-light .navbar-brand {
+  color: #202020 !important;
+  font-size: 1.35rem !important;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(32,32,32, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+
+/*
+  Legal messages style
+*/
+.LegalText {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 96px;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+
+.LegalText h1 {
+  font-family: "Helvetica Neue";
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.1em;
+  margin-left: -1.8px;
+  line-height: 1.2;
+  margin-top: 40px;
+  margin-bottom: .7em;
+}
+
+.LegalText h2 {
+  font-family: "Helvetica Neue";
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.1em;
+  margin-left: -1.8px;
+  line-height: 1.2;
+  margin-top: 40px;
+  margin-bottom: .7em;
+}
+
+.LegalText h3 {
+  font-family: "Helvetica Neue";
+  letter-spacing: 0.01rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8em;
+  line-height: 1.2;
+  color: #4a4a4a;
+}
+
+.LegalText h4 {
+  font-family: "Helvetica Neue";
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  margin-left: -1.5px;
+  line-height: 1.2;
+  color: #979797;
+  margin-top: 40px;
+  margin-bottom: .6em;
+}
+
+.LegalText p {
+  font-family: 'freight-text-pro','Merriweather',Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+}
+
+.LegalText ul {
+  font-family: 'freight-text-pro','Merriweather',Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+}
+
+.LegalText a {
+  color: #4A4A4A;
+  text-decoration: underline;
+}
+
+.LegalText a:hover {
+  color: #4A4A4A;
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) { 
+  .LegalText {
+      max-width: 320px;
+  }
+}
+
+@media (max-width: 320px) { 
+  .LegalText {
+      max-width: 280px;
+  }
+}

@@ -1,0 +1,37 @@
+@media (max-width: 576px) { 
+    .navbar-nav {
+        height: 100vh !important;
+    }
+    
+    .navbar-light .navbar-toggler {
+        outline: 0;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .Link {
+        padding-top: 50%;
+    }
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.Brand {
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    color: #202020;
+}
+
+.Link {
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+}
+
+.LinkItem {
+    border: none;
+    outline: none;
+}

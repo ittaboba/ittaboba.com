@@ -1,0 +1,62 @@
+.HelloArea {
+  display: table; 
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  
+  text-align: center;
+  z-index: 1;
+}
+
+.Hello {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  font-size: 30px;
+  color: #202020;
+}
+
+.Cursor .Cursor--blinking {
+  color: #202020;
+} 
+
+.LegalInformationArea {
+  position: absolute;
+  z-index: 1;
+  height: 40px;
+  width: 100%;
+  top: calc(100% - 40px);
+  font-size: 12px;
+  text-align: center;
+  font-family: "Helvetica Neue";
+}
+
+.LegalInformationArea a {
+  color: #202020;
+  text-decoration: underline;
+}
+
+.LegalInformationArea a:hover {
+  color: #202020;
+}
+
+@media (max-width: 576px) {
+  .LegalInformationArea {
+      height: 50px;
+      top: calc(100% - 50px);
+  }
+}
+
+
+@media (max-width: 320px) {
+  .LegalInformationArea {
+      font-size: 9px;
+  }
+}

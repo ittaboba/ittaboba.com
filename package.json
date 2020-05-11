@@ -1,0 +1,56 @@
+{
+  "name": "personal-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@ittaboba/dante2-cookie-free": "^0.5.0-rc28",
+    "@types/email-validator": "^1.0.6",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.36",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-router-dom": "^5.1.4",
+    "@types/react-share": "^3.0.3",
+    "@types/react-textarea-autosize": "^4.3.5",
+    "@types/react-typist": "^2.0.1",
+    "bootstrap": "^4.4.1",
+    "emotion-theming": "^10.0.27",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-leaf-carousel": "^2.0.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "react-share": "^3.0.1",
+    "react-spinners": "^0.6.1",
+    "react-textarea-autosize": "^7.1.2",
+    "react-typist": "^2.0.5",
+    "react-typist-loop": "0.0.5",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

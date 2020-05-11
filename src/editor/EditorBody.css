@@ -1,0 +1,60 @@
+
+.Body {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+@media (max-width: 768px) { 
+    .Body {
+        width: 90%;
+    }
+
+    .Body .postContent {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .Body .postContent {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) { 
+    .Body .postContent {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .Body .postContent {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Body .postContent {
+        font-size: 16px !important;
+    }
+}
+
+.graf--h2 {
+    font-family: "Helvetica Neue" !important;
+}
+
+.graf--h3 {
+    font-family: "Helvetica Neue" !important;
+}
+
+.graf--h4 {
+    font-family: "Helvetica Neue" !important;
+}
+
+.graf-image {
+    border-radius: 10px;
+}
+
+.css-1ixu9ad .graf--figure.is-mediaFocused .graf-image, .css-1ixu9ad .graf--figure.is-mediaFocused iframe {
+    box-shadow: 0 0 0 3px white !important;
+}

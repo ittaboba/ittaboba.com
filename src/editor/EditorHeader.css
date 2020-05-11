@@ -1,0 +1,121 @@
+.HeaderImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.HeaderTitleArea {
+  display: table; 
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+
+  margin: 0 auto;
+  
+  text-align: center;
+  z-index: 1;
+}
+
+.HeaderTitle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  color: white;
+}
+
+.HeaderFilter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+@media (max-width: 576px) { 
+  .HeaderImage {
+    height: 300px;
+  }
+
+  .HeaderTitleArea {
+    height: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20pt;
+  }
+
+  .HeaderFilter {
+    height: 300px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .HeaderImage {
+    height: 300px;
+  }
+
+  .HeaderTitleArea {
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 22pt;
+  }
+
+  .HeaderFilter {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) { 
+  .HeaderImage {
+    height: 400px;
+  }
+
+  .HeaderTitleArea {
+    height: 400px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 30pt;
+  }
+
+  .HeaderFilter {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .HeaderImage {
+    height: 400px;
+  }
+
+  .HeaderTitleArea {
+    height: 400px;
+    padding-left: 170px;
+    padding-right: 170px;
+    font-size: 35pt;
+  }
+
+  .HeaderFilter {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .HeaderImage {
+    height: 400px;
+  }
+
+  .HeaderTitleArea {
+    height: 400px;
+    padding-left: 240px;
+    padding-right: 240px;
+    font-size: 40pt;
+  }
+
+  .HeaderFilter {
+    height: 400px;
+  }
+}

@@ -32,7 +32,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-###Configurations
+### Configurations
 In order to make the project work, add the following fields in a `.env` file.
 
 ```

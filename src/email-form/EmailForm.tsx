@@ -130,7 +130,7 @@ function EmailForm({subject}: Props) {
                             />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Text className="FormDisclaimer">Your privacy matters as well. This feedback is anonymous and I do not collect nor store any of your personal data.</Form.Text>
+                            <Form.Text className="FormDisclaimer">Your privacy matters as well. This feedback is private and anonymous. I do not collect nor store any of your personal data. I won't be able to reply.</Form.Text>
                         </Form.Group>
                     </Form>
                     <Row className="justify-content-center">

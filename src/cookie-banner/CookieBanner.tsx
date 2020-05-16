@@ -14,7 +14,9 @@ function CookieBanner() {
     const [cookies, setCookie] = useCookies(['banner']);
 
     function closePressed() {
-        setCookie('banner', true , { path: '/' });
+        var d = new Date();
+        d.setFullYear(d.getFullYear() + 1, d.getMonth(), d.getDate());
+        setCookie('banner', true , { path: '/', expires: d});
     }
 
     return(

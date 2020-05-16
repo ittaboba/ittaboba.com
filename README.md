@@ -1,5 +1,7 @@
 # ittaboba.com
 
+![](cover.jpg)
+
 This is the source code of my personal [website](https://ittaboba.com)
 
 Feel free to use it to build your own website. Please just keep in mind that some assets, like the logo, are protected by copyright. You may find some descriptions and pictures related to myself too. Feel free to use them as placeholders during your development but remember to remove every asset or information related to me and my work before going in production. 

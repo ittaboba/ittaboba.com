@@ -1,0 +1,11 @@
+.EssaysContainer {
+    margin-bottom: 95px;
+    min-height: 200px;
+}
+
+@media (min-width: 568px) {
+    .EssaysContainer {
+        margin-bottom: 410px;
+    }
+}
+

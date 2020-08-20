@@ -44,6 +44,9 @@ function Footer() {
                             </Link>
                         </Col>
                         <Col sm={2} style={{textAlign: "center", marginTop: "20px"}}>
+                            <Link className="BannerAreaLink" to="/essays">Essays</Link>
+                        </Col>
+                        <Col sm={2} style={{textAlign: "center", marginTop: "20px"}}>
                             <Link className="BannerAreaLink" to="/projects">Projects</Link>
                         </Col>
                         <Col sm={2} style={{textAlign: "center", marginTop: "20px"}}>

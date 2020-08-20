@@ -14,6 +14,7 @@ import { Switch, Route, Redirect, Router, useLocation } from "react-router-dom";
 import Home from './home/Home'
 import About from './about/About'
 import NotFound from './404/NotFound'
+import Essays from './essays/Essays';
 import Projects from './projects/Projects'
 import Editor from './editor/Editor'
 import Contacts from './contacts/Contacts'
@@ -62,6 +63,9 @@ function App() {
                     </Route>
                     <Route path="/about">
                         <About/>
+                    </Route>
+                    <Route path="/essays">
+                        <Essays/>
                     </Route>
                     <Route path="/projects">
                         <Projects/>

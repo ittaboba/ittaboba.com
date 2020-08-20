@@ -32,9 +32,10 @@ function NavBar() {
           }} aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="Link mr-auto">
-                <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/projects">Projects</Nav.Link>
-                <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/about">About</Nav.Link>
-                <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/contacts">Contacts</Nav.Link>
+              <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/essays">Essays</Nav.Link>
+              <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/projects">Projects</Nav.Link>
+              <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/about">About</Nav.Link>
+              <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 200)} as={Link} className="LinkItem" to="/contacts">Contacts</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

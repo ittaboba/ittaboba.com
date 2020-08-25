@@ -7,9 +7,9 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
-      "css": "facebook",
-      "code": 61594,
+      "uid": "f08ba9f0e8f9b426a92efcaa59c1e932",
+      "css": "reddit-alien",
+      "code": 62081,
       "src": "fontawesome"
     },
     {
@@ -25,16 +25,24 @@
       "src": "fontawesome"
     },
     {
-      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
-      "css": "instagram",
-      "code": 61805,
-      "src": "fontawesome"
-    },
-    {
       "uid": "0f6a2573a7b6df911ed199bb63717e27",
       "css": "github-circled",
       "code": 61595,
       "src": "fontawesome"
+    },
+    {
+      "uid": "f949abcfe09b67b13bbdccb83a047009",
+      "css": "indiehackerslogo",
+      "code": 59392,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M0 0L998.2 0 998.2 1000 0 1000 0 0ZM221.8 281.8L221.8 714.5 323.6 714.5 323.6 281.8 221.8 281.8ZM670.9 549.1L670.9 714.5 772.7 714.5 772.7 281.8 670.9 281.8 670.9 447.3 523.6 447.3 523.6 281.8 421.8 281.8 421.8 714.5 523.6 714.5 523.6 549.1 670.9 549.1Z",
+        "width": 998
+      },
+      "search": [
+        "indiehackerslogo"
+      ]
     }
   ]
 }

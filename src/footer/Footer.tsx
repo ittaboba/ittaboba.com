@@ -58,8 +58,9 @@ function Footer() {
                     </Row>
                     <p className="FollowOn">Follow on</p>
                     <Row className="justify-content-center SocialArea">
-                        <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Facebook')} href="https://www.facebook.com/lorenzo.bernaschina" target="_blank" rel="noopener noreferrer">
-                            <p className="icon-facebook"></p>
+                        
+                        <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Reddit')} href="https://www.reddit.com/user/ittaboba" target="_blank" rel="noopener noreferrer">
+                            <p className="icon-reddit-alien"></p>
                         </a>
 
                         <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Twitter')} href="https://twitter.com/Ittaboba" target="_blank" rel="noopener noreferrer">
@@ -70,8 +71,8 @@ function Footer() {
                             <p className="icon-linkedin"></p>
                         </a>
 
-                        <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Instagram')} href="https://www.instagram.com/ittaboba/" target="_blank" rel="noopener noreferrer">
-                            <p className="icon-instagram"></p>
+                        <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Indie Hackers')} href="https://www.indiehackers.com/ittaboba" target="_blank" rel="noopener noreferrer">
+                            <p className="icon-indiehackerslogo"></p>
                         </a>
 
                         <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Footer', 'Visited Github')} href="https://github.com/ittaboba" target="_blank" rel="noopener noreferrer">

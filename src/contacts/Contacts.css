@@ -39,7 +39,7 @@
     margin-right: 6px;
 }
 
-.icon-facebook, .icon-twitter, .icon-linkedin, .icon-instagram, .icon-github-circled {
+.icon-reddit-alien, .icon-twitter, .icon-linkedin, .icon-indiehackerslogo, .icon-github-circled {
     font-size: 22px;
     text-align: center;
     line-height: 48px;
@@ -51,7 +51,7 @@
     background-color: #202020;
 }
 
-.icon-facebook:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-instagram:hover, .icon-github-circled:hover {
+.icon-reddit-alien:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-indiehackerslogo:hover, .icon-github-circled:hover {
     color:white;
     text-decoration: none;
 }

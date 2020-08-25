@@ -100,7 +100,7 @@ function EmailForm({subject}: Props) {
                     <p className="SendEmailStatusMsg">
                         Your feedback has been sent succesfully!
                         <br></br>
-                        If you wish to continue the conversation, please reach me on social networks :)
+                        If you wish to continue the conversation, please contact me on Twitter :)
                     </p>
                 </div>
             }

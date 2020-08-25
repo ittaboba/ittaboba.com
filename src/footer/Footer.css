@@ -75,7 +75,7 @@
     text-decoration: none;
 }
 
-.FooterArea .icon-facebook, .FooterArea .icon-twitter, .FooterArea .icon-linkedin, .FooterArea .icon-instagram, .FooterArea .icon-github-circled {
+.FooterArea .icon-indiehackerslogo, .FooterArea .icon-twitter, .FooterArea .icon-linkedin, .FooterArea .icon-reddit-alien, .FooterArea .icon-github-circled {
     font-size: 16px;
     text-align: center;
     line-height: 30px;
@@ -87,7 +87,7 @@
     background-color: #202020;
 }
 
-.icon-facebook:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-instagram:hover, .icon-github-circled:hover {
+.icon-indiehackerslogo:hover, .icon-twitter:hover, .icon-linkedin:hover, .icon-reddit-alien:hover, .icon-github-circled:hover {
     color:white;
     text-decoration: none;
 }

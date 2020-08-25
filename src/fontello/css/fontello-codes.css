@@ -1,6 +1,6 @@
 
+.icon-indiehackerslogo:before { content: '\e800'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-reddit-alien:before { content: '\f281'; } /* '' */

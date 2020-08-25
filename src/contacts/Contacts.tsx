@@ -29,8 +29,8 @@ function Contacts() {
                     <Col lg={6} style={{marginBottom: '20px'}}>
                         <div style={{backgroundImage: `url(${require('../assets/contacts-image.jpg')})`}} className="Img"></div>
                         <Row className="justify-content-center">
-                            <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Facebook')} href="https://www.facebook.com/lorenzo.bernaschina" target="_blank" rel="noopener noreferrer">
-                                <p className="icon-facebook"></p>
+                            <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Reddit')} href="https://www.reddit.com/user/ittaboba" target="_blank" rel="noopener noreferrer">
+                                <p className="icon-reddit-alien"></p>
                             </a>
 
                             <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Twitter')} href="https://twitter.com/Ittaboba" target="_blank" rel="noopener noreferrer">
@@ -41,8 +41,8 @@ function Contacts() {
                                 <p className="icon-linkedin"></p>
                             </a>
 
-                            <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Instagram')} href="https://www.instagram.com/ittaboba/" target="_blank" rel="noopener noreferrer">
-                                <p className="icon-instagram"></p>
+                            <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Indie Hackers')} href="https://www.indiehackers.com/ittaboba" target="_blank" rel="noopener noreferrer">
+                                <p className="icon-indiehackerslogo"></p>
                             </a>
 
                             <a className="SocialButton" onClick={() => eventTracking('Social', 'Visited social newtork profile from Contacts', 'Visited Github')} href="https://github.com/ittaboba" target="_blank" rel="noopener noreferrer">

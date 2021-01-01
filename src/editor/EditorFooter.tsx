@@ -26,6 +26,9 @@ function EditorFooter({subject}: Props) {
             <div className="Footer">
                 <div className="FooterContainer">
                     <Container>
+                        <Row className="justify-content-center" style={{marginBottom: 25, fontFamily: "Helvetica Neue"}}>
+                            Written with ❤️ using&nbsp;<a onClick={() => eventTracking('Gems banner', 'Gems link opened', `Gems link opened for ${subject}`)} href="https://www.gemsnotes.app/" target="_blank" rel="noopener noreferrer">Gems</a>
+                        </Row>
                         <Row className="justify-content-center">
                             <a className="FollowTwitterButton" onClick={() => eventTracking('Social', 'Follow me on Twitter button pressed', `Follow me on Twitter button pressed for ${subject}`)} href="https://twitter.com/Ittaboba" target="_blank" rel="noopener noreferrer">
                                 Follow me on Twitter

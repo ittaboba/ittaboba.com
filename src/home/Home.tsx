@@ -27,7 +27,7 @@ function Home() {
                                 [
                                     'Lorenzo',
                                     'a software engineer',
-                                    '24',
+                                    'writing about creativity and technology',
                                     'a full stack developer',
                                     'an athlete',
                                     'italian',

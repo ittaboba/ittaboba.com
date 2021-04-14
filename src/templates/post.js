@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -9,7 +9,7 @@ import SEO from "../components/SEO"
 
 import components from "../components/mdx"
 import Layout from "../components/Layout"
-import { bpMaxLG, bpMaxMD, bpMaxSM, bpMaxXS } from "../lib/breakpoints"
+import { bpMinLG, bpMinMD, bpMinSM, bpMinXL } from "../lib/breakpoints"
 
 export default function Post({data:{mdx}}) {
     return (
@@ -21,7 +21,7 @@ export default function Post({data:{mdx}}) {
                 path={`/${mdx.frontmatter.slug}`}
                 isBlogPost /> */}
             <div>
-                <GatsbyImage style={{marginTop: "60px"}} alt={"Hero image"} image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData} />
+                <GatsbyImage alt={"Hero image"} image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData} />
                 <div css={css`
                     padding-top: 20px;
                     padding-right: 20px;
@@ -41,35 +41,32 @@ export default function Post({data:{mdx}}) {
                 `}>
                     <h1 css={css`
                         font-family: "Helvetica Neue";
-                        font-size: 45px;
                         font-weight: 600;
-                        color: #4A4A4A;
-                        ${bpMaxXS} {
+                        ${bpMinSM} {
                             font-size: 30px;
                         }
-                        ${bpMaxSM} {
+                        ${bpMinMD} {
                             font-size: 33px;
                         }
-                        ${bpMaxMD} {
+                        ${bpMinLG} {
                             font-size: 35px;
                         }
-                        ${bpMaxLG} {
+                        ${bpMinXL} {
                             font-size: 40px;
                         }
                     `}>{mdx.frontmatter.title}</h1>
                     <p css={css`
                         font-weight: 500;
-                        color: #676767;
-                        ${bpMaxXS} {
+                        ${bpMinSM} {
                             font-size: 16px;
                         }
-                        ${bpMaxSM} {
+                        ${bpMinMD} {
                             font-size: 18px;
                         }
-                        ${bpMaxMD} {
+                        ${bpMinLG} {
                             font-size: 18px;
                         }
-                        ${bpMaxLG} {
+                        ${bpMinXL} {
                             font-size: 18px;
                         }
                     `}>

@@ -33,6 +33,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     context: { edges: posts },
   })
 
+  createPage({
+    path: `/projects`,
+    component: path.resolve(`src/templates/projects.js`),
+    // you can use the values in this context in
+    // our page layout component
+    context: { edges: posts },
+  })
+
+  createPage({
+    path: `/about`,
+    component: path.resolve(`src/templates/about.js`),
+    // you can use the values in this context in
+    // our page layout component
+    context: { edges: posts },
+  })
+
   // call `createPage` for each result
   posts.forEach(({ node }, index) => {
     createPage({

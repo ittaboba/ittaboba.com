@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 
 export default styled.figcaption`
-    color: #7D7D7D;
     max-width: 750px;
     font-family: Helvetica Neue;
     letter-spacing: 0px;

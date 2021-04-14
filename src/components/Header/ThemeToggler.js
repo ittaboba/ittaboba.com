@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 import styled from '@emotion/styled'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import { useTheme } from '../Theming'
@@ -21,24 +20,25 @@ const DefaultMode = styled(FiSun)({
 const ThemeToggler = ({ toggleTheme, themeName }) => {
   const theme = useTheme()
   return (
-    <Button
+    <button
       css={{
         borderRadius: '50%',
         width: '27px',
         height: '27px',
         padding: 0,
+        border: `1px solid ${theme.colors.headerBg}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         margin: 0,
-        color: theme.colors.white,
-        background: theme.colors.headerBg,
+        color: theme.colors.headerBg,
+        background: theme.colors.text,
+        outline: 0,
         '@media (hover: hover)': {
           ':hover': {
-            background:
-              theme.themeName === 'default'
-                ? theme.colors.text
-                : theme.colors.primary,
+            border: `1px solid ${theme.colors.text}`,
+            color: theme.colors.text,
+            background: theme.colors.headerBg
           },
         },
       }}
@@ -52,7 +52,7 @@ const ThemeToggler = ({ toggleTheme, themeName }) => {
       ) : (
         <DarkMode title="Switch to dark mode" />
       )}
-    </Button>
+    </button>
   )
 }
 export default ThemeToggler

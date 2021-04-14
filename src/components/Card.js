@@ -1,13 +1,15 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { css } from '@emotion/core'
+import { useTheme } from './Theming'
 
 function Card({title, preview, image}) {
+    const theme = useTheme()
+
     return (
         <div css={css`
             height: 100%;
             overflow: hidden;
-            border: 2px solid gainsboro;
             box-sizing: border-box;
             position: relative;
             cursor: pointer;
@@ -36,12 +38,11 @@ function Card({title, preview, image}) {
                 font-size: 24px;
                 font-weight: 700;
                 padding: 10px;
-                color: #202020;
             `}>{title}</h2>
             <p css={css`
                 font-size: 16px;
                 padding: 0 10px;
-                color: #676767;
+                color: ${theme.themeName === "default" ? theme.colors.gray : theme.colors.text};
             `}>{preview}</p>
         </div>
     )

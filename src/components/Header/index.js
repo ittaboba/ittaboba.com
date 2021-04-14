@@ -2,13 +2,13 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import { useTheme } from '../Theming'
-import { bpMaxSM } from '../../lib/breakpoints'
+import { bpMaxSM, bpMaxMD } from '../../lib/breakpoints'
 import MobileMenu from './MobileMenu'
 import Links from './Links'
 
 import Container from '../Container'
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const theme = useTheme()
   return (
     <header
@@ -20,6 +20,15 @@ const Header = ({ siteTitle }) => {
         background: none;
         padding: 20px 0;
         background: ${theme.colors.headerBg};
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 100%;
+          height: 4px;
+          background: linear-gradient(180deg,rgba(9,30,66,.13),rgba(9,30,66,.13) 1px,rgba(9,30,66,.08) 0,rgba(9,30,66,0) 4px);
+        }
       `}
     >
       <Container noVerticalPadding>
@@ -31,19 +40,39 @@ const Header = ({ siteTitle }) => {
             align-items: center;
           `}
         >
-          <Link
-            to="/"
-            aria-label="go to homepage"
-            css={css`
-              color: white;
+          <Link css={css`
+              font-size: 16px;
+              font-weight: bold;
+              color: ${theme.colors.text};
               &:hover {
-                color: white;
-                text-decoration: none;
+                color: ${theme.colors.text};
               }
-            `}
-          >
-            {siteTitle}
-          </Link>
+            `} to="/">
+              <div css={css`
+                display: flex;
+                justify-content: start;
+                ${bpMaxMD} {
+                  justify-content: center;
+                }
+              `}>
+                <img
+                    src={theme.logo}
+                    width="40"
+                    height="40"
+                    alt="Lorenzo Bernaschina's logo"
+                    css={css`
+                      margin-bottom: 0;
+                    `}
+                    />
+                <div css={css`
+                  ${bpMaxSM} {
+                    display: none;
+                  }
+                `}>
+                    ittaboba.com
+                </div>
+              </div>
+            </Link>
           <div
             css={css`
               font-size: 16px;
@@ -52,7 +81,7 @@ const Header = ({ siteTitle }) => {
               align-items: center;
               a {
                 text-decoration: none;
-                color: ${theme.colors.white};
+                color: ${theme.colors.gray};
                 margin-left: 16px;
                 margin-right: 16px;
               }
@@ -69,6 +98,13 @@ const Header = ({ siteTitle }) => {
                 ${bpMaxSM} {
                   display: none;
                 }
+                a {
+                  text-decoration: none;
+                  color: ${theme.colors.text};
+                  &:hover {
+                    color: ${theme.colors.red};
+                  }
+                }
               `}
             >
               <Links />
@@ -83,21 +119,4 @@ const Header = ({ siteTitle }) => {
   )
 }
 
-const ConnectedHeader = props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Header siteTitle={data.site.siteMetadata.title} {...props} />
-    )}
-  />
-)
-
-export default ConnectedHeader
+export default Header

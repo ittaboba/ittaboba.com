@@ -13,7 +13,7 @@ export const Twitter = ({ url = `${config.twitter}` }) => {
         color: ${theme.colors.text};
         margin-left: 10px;
         :hover {
-          color: ${theme.colors.primary};
+          color: ${theme.colors.link};
         }
       `}
       aria-label="Visit my Twitter"
@@ -43,7 +43,7 @@ export const LinkedIn = ({ url = `${config.linkedin}` }) => {
         margin-left: 10px;
         color: ${theme.colors.text};
         :hover {
-          color: ${theme.colors.primary};
+          color: ${theme.colors.link};
         }
       `}
       aria-label="Visit my LinkedIn"
@@ -72,7 +72,7 @@ export const GitHub = ({ url = `${config.github}` }) => {
         margin-left: 10px;
         color: ${theme.colors.text};
         :hover {
-          color: ${theme.colors.primary};
+          color: ${theme.colors.link};
         }
       `}
       aria-label="Visit my GitHub"

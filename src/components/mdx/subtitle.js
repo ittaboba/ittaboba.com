@@ -14,7 +14,6 @@ export default styled.h3`
   ${mq["xl"]} {
     font-size: 28px;
   }
-  color: #4A4A4A;
   font-weight: 700;
   line-height: 1.1;
   margin: 30px auto 15px auto;

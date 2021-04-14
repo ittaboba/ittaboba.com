@@ -1,15 +1,15 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import { useTheme } from '../components/Theming'
-import Container from '../components/Container'
 import Typist from 'react-typist';
 import TypistLoop from 'react-typist-loop';
+import Container from '../components/Container'
+import {  bpMinMD } from "../lib/breakpoints"
+import Cards from '../components/Cards'
 
 const Hero = () => {
-
   const theme = useTheme()
 
   const colors = [
@@ -28,11 +28,12 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
+        padding: 20px 0 20px 0;
         display: flex;
+        justify-content: center;
       `}
     >
-      <Container
+      <div
         css={css`
           display: flex;
           flex-direction: column;
@@ -54,12 +55,19 @@ const Hero = () => {
               width: 100%;
               font-family: "Helvetica Neue";
               font-weight: 700;
-              font-size: 30px;
-              color: #202020;
+              font-size: 24px;
+              color: ${theme.colors.text};
+              line-height: 1.6em;
+              padding: 20px;
+              ${bpMinMD} {
+                font-size: 30px;
+              }
             `}>
                 <span>Hello, I am&nbsp;</span>
                 <span css={css`
-                  display: inline-block;
+                  ${bpMinMD} {
+                    display: inline-block;
+                  }
                 `}>
                     <TypistLoop interval={200}>
                         {
@@ -82,7 +90,7 @@ const Hero = () => {
                 </span>
             </div>
           </div>
-      </Container>
+      </div>
       <div
         css={css`
           height: 200px;
@@ -93,22 +101,55 @@ const Hero = () => {
   )
 }
 
-export default function Index() {
-  const theme = useTheme()
+export default function Index({data}) {
+  const { edges: posts } = data.allMdx
   return (
     <Layout>
       <Hero />
-      <Container
+      <div
         css={css`
           padding-bottom: 0;
         `}
       >
-        <p>
+        <p
+          css={css`
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+          `}>
           Hello, I am Lorenzo. Here’s my personal journey so far. I have spent almost a decade making projects and learning how to build solutions. It was fun and I enjoyed every second of it. Now I am focusing on how to find problems worth solving. Once I will have these mental models, I will be finally ready to make a living doing what I love. I am building a networked bookmarking and note-taking app called Gems. 
         </p>
-      </Container>
+        <Container>
+          <h2>
+            Latest articles
+          </h2>
+          <Cards items={posts.filter((p, i) => i < 3)} />
+        </Container>
+      </div>
     </Layout>
   )
 }
 
 
+export const pageQuery = graphql`
+  query home {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            slug
+            banner {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

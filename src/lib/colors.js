@@ -1,8 +1,8 @@
 const colors = {
   black: '#131415',
   white: '#fff',
-  gray: '#fafafa',
-  red: '#E74C3C',
+  gray: '#676767',
+  red: '#EC331B',
   blue: '#5348ff',
   green: '#29B573',
 }

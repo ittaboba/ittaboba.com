@@ -18,7 +18,6 @@ export default styled.ul`
     font-weight: 400;
     font-style: normal;
     line-height: 1.9;
-    color: rgb(74, 74, 74);
     font-family: 'Merriweather';
     max-width: 750px;
     margin: 30px auto;

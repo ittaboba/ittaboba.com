@@ -8,16 +8,40 @@ import { ThemeProvider, themes } from './Theming'
 import { bpMaxSM } from '../lib/breakpoints'
 import mdxComponents from './mdx'
 import Header from './Header'
-import reset from '../lib/reset'
-import { fonts } from '../lib/typography'
+// import { fonts } from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
 
 const getGlobalStyles = theme => {
   return css`
+    form {
+      margin: 0;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    html,
+    html {
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      overflow-y: auto !important;
+      box-sizing: border-box;
+      -ms-overflow-style: scrollbar;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
     body {
+      font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue", sans-serif;
+      font-style: normal;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
       background: ${theme.colors.bodyBg};
       color: ${theme.colors.text};
+      line-height: 1.6em;
     }
     &::selection {
       color: ${theme.colors.white};
@@ -48,6 +72,7 @@ const getGlobalStyles = theme => {
           color: ${theme.colors.text};
         }
       }
+      line-height: 1.2;
     }
     ${bpMaxSM} {
       p,
@@ -69,11 +94,11 @@ const getGlobalStyles = theme => {
       background: none;
     }
     em {
-      font-family: ${fonts.regularItalic};
+      font-family: "Helvetica";
     }
     strong {
       em {
-        font-family: ${fonts.semiboldItalic};
+        font-family: "Helvetica";
       }
     }
     input {
@@ -81,7 +106,7 @@ const getGlobalStyles = theme => {
       border: 1px solid ${theme.colors.gray};
       padding: 5px 10px;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-      font-family: ${fonts.regular};
+      font-family: "Helvetica";
       margin-top: 5px;
       ::placeholder {
         opacity: 0.4;
@@ -157,7 +182,6 @@ export default ({
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
-        <Global styles={reset()} />
         <Global styles={getGlobalStyles(theme)} />
         <div
           css={css`
@@ -168,8 +192,12 @@ export default ({
           `}
         >
           <Header />
-          {children}
-          <Footer />
+            <div css={css`
+              margin-top: 80px;
+            `}>
+              {children}
+              <Footer />
+            </div>
         </div>
       </Fragment>
     </ThemeProvider>

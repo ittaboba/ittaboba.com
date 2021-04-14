@@ -2,28 +2,33 @@ import { createTheming } from '@callstack/react-theme-provider'
 import { lighten } from 'polished'
 import colors from '../lib/colors'
 
+import LogoDark from "../../src/images/logo-dark.svg"
+import LogoLight from "../../src/images/logo-light.svg"
+
 const themes = {
   default: {
     themeName: 'default',
     colors: {
-      primary: colors.blue,
+      primary: colors.white,
       text: colors.black,
-      bodyBg: colors.gray,
-      headerBg: colors.blue,
-      link: colors.blue,
+      bodyBg: colors.white,
+      headerBg: colors.white,
+      link: colors.red,
       ...colors,
     },
+    logo: LogoDark
   },
   dark: {
     themeName: 'dark',
     colors: {
-      primary: lighten(0.05, colors.blue),
+      primary: colors.black,
       text: colors.white,
       bodyBg: colors.black,
       headerBg: colors.black,
-      link: lighten(0.05, colors.blue),
+      link: colors.red,
       ...colors,
     },
+    logo: LogoLight
   },
 }
 

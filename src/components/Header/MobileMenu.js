@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { css } from '@emotion/core'
-import Container from '../Container'
 
 import { bpMaxSM } from '../../lib/breakpoints'
 
@@ -10,7 +9,7 @@ const Toggle = ({ children }) => {
   const [isToggledOn, setToggle] = useState(false)
   const toggle = () => setToggle(!isToggledOn)
   const theme = useTheme()
-  const color = theme.colors.white
+  const color = theme.colors.text
 
   return (
     <div
@@ -93,14 +92,16 @@ const Toggle = ({ children }) => {
             background: ${theme.colors.headerBg};
           `}
         >
-          <Container
+          <div
             css={css`
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: space-evenly;
+              margin-left: auto;
+              margin-right: auto;
               a {
-                color: white;
+                color: ${theme.colors.text};
                 font-size: 22px;
                 margin: 10px 0;
                 padding: 10px;
@@ -115,7 +116,7 @@ const Toggle = ({ children }) => {
             `}
           >
             {children}
-          </Container>
+          </div>
         </div>
       )}
     </div>

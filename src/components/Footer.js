@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { Twitter, GitHub, LinkedIn } from './Social'
-import Link from '../components/Link'
 import Container from './Container'
 import { bpMaxXS } from '../lib/breakpoints'
 

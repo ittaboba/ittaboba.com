@@ -1,13 +1,13 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import Layout from '../components/Layout'
-import Link from '../components/Link'
 import { useTheme } from '../components/Theming'
 import Typist from 'react-typist';
 import TypistLoop from 'react-typist-loop';
 import Container from '../components/Container'
 import {  bpMinMD } from "../lib/breakpoints"
 import Cards from '../components/Cards'
+import SEO from '../components/SEO'
 
 const Hero = () => {
   const theme = useTheme()
@@ -105,6 +105,7 @@ export default function Index({data}) {
   const { edges: posts } = data.allMdx
   return (
     <Layout>
+      <SEO />
       <Hero />
       <div
         css={css`
@@ -120,9 +121,9 @@ export default function Index({data}) {
           Hello, I am Lorenzo. Here’s my personal journey so far. I have spent almost a decade making projects and learning how to build solutions. It was fun and I enjoyed every second of it. Now I am focusing on how to find problems worth solving. Once I will have these mental models, I will be finally ready to make a living doing what I love. I am building a networked bookmarking and note-taking app called Gems. 
         </p>
         <Container>
-          <h2>
+          <h1>
             Latest articles
-          </h2>
+          </h1>
           <Cards items={posts.filter((p, i) => i < 3)} />
         </Container>
       </div>

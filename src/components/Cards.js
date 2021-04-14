@@ -1,10 +1,8 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { css } from '@emotion/core'
-import { useTheme } from './Theming'
 import Card from "./Card"
 import { Link } from "gatsby"
-import { bpMaxMD, bpMaxSM, bpMinMD } from "../lib/breakpoints"
+import { bpMinMD } from "../lib/breakpoints"
 
 function Cards({items}) {
     return(

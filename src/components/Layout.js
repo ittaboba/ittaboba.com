@@ -1,15 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import { MDXProvider } from '@mdx-js/react'
 import { lighten } from 'polished'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider, themes } from './Theming'
 import { bpMaxSM } from '../lib/breakpoints'
-import mdxComponents from './mdx'
 import Header from './Header'
-// import { fonts } from '../lib/typography'
-import config from '../../config/website'
 import Footer from '../components/Footer'
 
 const getGlobalStyles = theme => {

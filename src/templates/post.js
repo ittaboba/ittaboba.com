@@ -14,12 +14,12 @@ import { bpMinLG, bpMinMD, bpMinSM, bpMinXL } from "../lib/breakpoints"
 export default function Post({data:{mdx}}) {
     return (
         <Layout>
-            {/* <SEO 
+            <SEO 
                 title={mdx.frontmatter.title}
                 description={mdx.frontmatter.description}
                 image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData.images.fallback.src}
-                path={`/${mdx.frontmatter.slug}`}
-                isBlogPost /> */}
+                path={`/article/${mdx.frontmatter.slug}`}
+                isBlogPost />
             <div>
                 <GatsbyImage alt={"Hero image"} image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData} />
                 <div css={css`
@@ -88,7 +88,7 @@ export default function Post({data:{mdx}}) {
             </article>
             <div style={{textAlign: "center"}}>
                 <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                    Written with ❤️ using my&nbsp;<Link className="GemsLink" to="/">Gems</Link>&nbsp;notes
+                    Written with <span role="img" aria-label="heart emoji">❤️</span> using my&nbsp;<Link className="GemsLink" to="/">Gems</Link>&nbsp;notes
                 </div>
             </div>
         </Layout>

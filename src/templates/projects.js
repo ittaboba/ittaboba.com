@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 import { css } from '@emotion/core'
-import { useTheme } from '../components/Theming'
 
 import Layout from "../components/Layout"
 import { bpMaxMD, bpMaxSM } from "../lib/breakpoints"
@@ -15,15 +14,13 @@ export default function Projects({data}) {
     const title = "Projects"
     const subtitle = "When my imagination turned into reality"
 
-    const theme = useTheme()
-
     return (
       <Layout>
-        {/* <SEO 
+        <SEO 
           title={title}
           description={subtitle}
-          path={"/blog"}
-        /> */}
+          path={"/projects"}
+        />
         <Container noVerticalPadding>
           <h1 css={css`
             padding: 0 40px;

@@ -37,12 +37,11 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
     
     return (
         <Layout>
-            {/* <SEO 
+            <SEO 
                 title={mdx.frontmatter.title}
                 description={mdx.frontmatter.description}
                 image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData.images.fallback.src}
-                path={`/${mdx.frontmatter.slug}`}
-                isBlogPost /> */}
+                path={`/${mdx.frontmatter.slug}`} />
             <Container>
                 <Slider {...settings}>
                     <div css={css`

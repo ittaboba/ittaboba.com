@@ -1,28 +1,22 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/blog your pathPrefix should be "blog"
-  siteTitle: 'My Blog', // Navigation and Site Title
-  siteTitleAlt: 'The blog of an egghead creator', // Alternative Site title for SEO
-  siteTitleShort: 'Starter Blog', // short_name for manifest
-  siteUrl: 'https://your-site.io', // Domain of your site. No trailing slash!
+  siteTitle: 'Lorenzo Bernaschina\'s Website', // Navigation and Site Title
+  siteTitleAlt: 'The blog of a software engineer and content creator', // Alternative Site title for SEO
+  siteTitleShort: 'Lorenzo\'s Blog', // short_name for manifest
+  siteUrl: 'https://ittaboba.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'This is where they post things!',
-  author: 'Author', // Author for schemaORGJSONLD
-  organization: 'egghead.io LLC',
+  siteDescription: 'Personal website where I share my journey, discoveries, and projects',
+  author: 'Lorenzo Bernaschina', // Author for schemaORGJSONLD
+  organization: 'ittaboba',
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@eggheadio', // Twitter Username
-  ogSiteName: 'egghead.io Gatsby Starter Blog', // Facebook Site Name
+  userTwitter: '@ittaboba', // Twitter Username
   ogLanguage: 'en_US',
   googleAnalyticsID: '',
 
-  // Manifest and Progress color
-  themeColor: '#5348FF',
-  backgroundColor: '#2b2e3c',
-
   // Social component
-  twitter: 'https://twitter.com/eggheadio/',
-  twitterHandle: '@eggheadio',
-  github: 'https://github.com/eggheadio/',
-  linkedin: '',
+  twitter: 'https://twitter.com/ittaboba/',
+  twitterHandle: '@ittaboba',
+  // github: 'https://github.com/eggheadio/',
+  // linkedin: '',
 }

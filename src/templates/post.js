@@ -4,8 +4,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { css } from '@emotion/core'
-import SEO from "../components/SEO"
+import { css } from '@emotion/react'
+import Seo from "../components/seo"
 
 import components from "../components/mdx"
 import Layout from "../components/Layout"
@@ -14,7 +14,7 @@ import { bpMinLG, bpMinMD, bpMinSM, bpMinXL } from "../lib/breakpoints"
 export default function Post({data:{mdx}}) {
     return (
         <Layout>
-            <SEO 
+            <Seo 
                 title={mdx.frontmatter.title}
                 description={mdx.frontmatter.description}
                 image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData.images.fallback.src}
@@ -70,9 +70,9 @@ export default function Post({data:{mdx}}) {
                             font-size: 18px;
                         }
                     `}>
-                        <a href="https://twitter.com/Ittaboba" target="_blank" rel="noopener noreferrer">
+                        <Link to="/">
                             {`${mdx.frontmatter.author}`}
-                        </a>
+                        </Link>
                         {` ∙ Reading time: ${mdx.timeToRead} minutes`}
                     </p>
                 </div>
@@ -80,7 +80,12 @@ export default function Post({data:{mdx}}) {
             </div>
             
             <article>
-                <div style={{padding: "0 20px 20px 20px"}}>
+                <div css={css`
+                    padding: 0px 20px;
+                    max-width: 750px;
+                    margin-left: auto;
+                    margin-right: auto;
+                `}>
                     <MDXProvider components={components}>
                         <MDXRenderer>{mdx.body}</MDXRenderer>
                     </MDXProvider>
@@ -88,7 +93,7 @@ export default function Post({data:{mdx}}) {
             </article>
             <div style={{textAlign: "center"}}>
                 <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                    Written with <span role="img" aria-label="heart emoji">❤️</span> using my&nbsp;<Link className="GemsLink" to="/">Gems</Link>&nbsp;notes
+                    Written with <span role="img" aria-label="heart emoji">❤️</span> using my&nbsp;<Link className="GemsLink" to="https://gemsnotes.app/" target="_blank">Gems</Link>&nbsp;notes
                 </div>
             </div>
         </Layout>

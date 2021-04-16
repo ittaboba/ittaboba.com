@@ -12,21 +12,16 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
     canonicalUrl: config.siteUrl,
-    image: config.siteLogo,
+    image: config.siteImage,
     author: {
       name: config.author,
-      minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
-      `,
+      minibio: ``,
     },
     organization: {
       name: config.organization,
       url: config.siteUrl,
-      logo: config.siteLogo,
+      logo: config.siteImage,
     },
     social: {
       twitter: config.twitterHandle,
@@ -78,8 +73,14 @@ module.exports = {
               showCaptions: ['title', 'alt']
             },
           },
-        ],
-      },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
+          }
+        ]
+      }
     },
     {
       resolve: "gatsby-plugin-web-font-loader",

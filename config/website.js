@@ -5,7 +5,7 @@ module.exports = {
   siteTitleShort: 'Lorenzo\'s Blog', // short_name for manifest
   siteUrl: 'https://ittaboba.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
+  siteImage: '/images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription: 'Personal website where I share my journey, discoveries, and projects',
   author: 'Lorenzo Bernaschina', // Author for schemaORGJSONLD
   organization: 'ittaboba',
@@ -17,6 +17,6 @@ module.exports = {
   // Social component
   twitter: 'https://twitter.com/ittaboba/',
   twitterHandle: '@ittaboba',
-  // github: 'https://github.com/eggheadio/',
-  // linkedin: '',
+  github: 'https://github.com/ittaboba',
+  linkedin: 'https://www.linkedin.com/in/lorenzo-bernaschina-669a08b9/',
 }

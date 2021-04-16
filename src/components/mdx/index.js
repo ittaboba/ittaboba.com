@@ -10,7 +10,7 @@ import ListItem from "./listitem"
 import Paragraph from "./paragraph"
 import Figcaption from "./figcaption"
 
-export default {
+const Mdx = {
   h2: props => <Title {...props} />,
   h3: props => <Subtitle {...props} />,
   a: props => <ExternalLink {...props} />,
@@ -31,6 +31,8 @@ export default {
     }
   },
 }
+
+export default Mdx
 
 // taken from kent c. dodds blog source code
 // lifted this from mdx-utils

@@ -1,5 +1,5 @@
 import React from 'react'
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import Layout from '../components/Layout'
 import { useTheme } from '../components/Theming'
 import Typist from 'react-typist';
@@ -7,7 +7,8 @@ import TypistLoop from 'react-typist-loop';
 import Container from '../components/Container'
 import {  bpMinMD } from "../lib/breakpoints"
 import Cards from '../components/Cards'
-import SEO from '../components/SEO'
+import Seo from '../components/seo'
+import { graphql } from 'gatsby'
 
 const Hero = () => {
   const theme = useTheme()
@@ -105,7 +106,7 @@ export default function Index({data}) {
   const { edges: posts } = data.allMdx
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <Hero />
       <div
         css={css`
@@ -118,7 +119,9 @@ export default function Index({data}) {
             margin: 0 auto;
             padding: 20px;
           `}>
-          Hello, I am Lorenzo. Here’s my personal journey so far. I have spent almost a decade making projects and learning how to build solutions. It was fun and I enjoyed every second of it. Now I am focusing on how to find problems worth solving. Once I will have these mental models, I will be finally ready to make a living doing what I love. I am building a networked bookmarking and note-taking app called Gems. 
+          {/* Hello, I am Lorenzo. Here’s my personal journey so far. I have spent almost a decade making projects and learning how to build solutions. It was fun and I enjoyed every second of it. Now I am focusing on how to find problems worth solving. Once I will have these mental models, I will be finally ready to make a living doing what I love. I am building a networked bookmarking and note-taking app called Gems.  */}
+          Hello, I am Lorenzo. I write about 
+          Aenean fringilla sapien vitae maximus lobortis. Vivamus luctus purus nisi. Aenean quis ipsum turpis. Ut ut rutrum orci. Duis in mi lacus. Nullam rhoncus at nulla eu aliquam. Curabitur vitae augue justo.
         </p>
         <Container>
           <h1>
@@ -135,6 +138,7 @@ export default function Index({data}) {
 export const pageQuery = graphql`
   query home {
     allMdx(
+      filter: {frontmatter: {type: { ne: "about" } } }
       sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {

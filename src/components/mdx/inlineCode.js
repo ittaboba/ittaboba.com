@@ -1,7 +1,9 @@
 import React from "react"
 
-export default ({ children }) => (
+const InlineCode = ({ children }) => (
   <code style={{ background: "#00000018", padding: "0 0.2rem" }}>
     {children}
   </code>
 )
+
+export default InlineCode

@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import config from '../../../config/website'
 
-const SEO = ({ title, description, image, path, isBlogPost }) => (
+const Seo = ({ title, description, image, path, isBlogPost }) => (
   <StaticQuery
     query={graphql`
       {
@@ -65,7 +65,7 @@ const SEO = ({ title, description, image, path, isBlogPost }) => (
   />
 )
 
-SEO.propTypes = {
+Seo.propTypes = {
   isBlogPost: PropTypes.bool,
   title: PropTypes.string, 
   description: PropTypes.string, 
@@ -73,11 +73,11 @@ SEO.propTypes = {
   keywords: PropTypes.array
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   isBlogPost: false,
   title: config.siteTitle,
   description: config.siteDescription,
   image: config.siteImage
 }
 
-export default SEO
+export default Seo

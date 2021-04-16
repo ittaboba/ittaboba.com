@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { css } from '@emotion/core'
-import SEO from "../components/SEO"
+import { css } from '@emotion/react'
+import Seo from "../components/seo"
 import Slider from "react-slick";
 
 import components from "../components/mdx"
@@ -37,10 +37,10 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
     
     return (
         <Layout>
-            <SEO 
+            <Seo 
                 title={mdx.frontmatter.title}
                 description={mdx.frontmatter.description}
-                image={mdx.frontmatter.banner.childImageSharp.gatsbyImageData.images.fallback.src}
+                image={image1.childImageSharp.gatsbyImageData.images.fallback.src}
                 path={`/${mdx.frontmatter.slug}`} />
             <Container>
                 <Slider {...settings}>
@@ -52,7 +52,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} alt="" image={image1.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image1.childImageSharp.gatsbyImageData} />
                     </div>
                     <div css={css`
                         ${bpMinSM} {
@@ -62,7 +62,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} alt="" image={image2.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image2.childImageSharp.gatsbyImageData} />
                     </div>
                     <div css={css`
                         ${bpMinSM} {
@@ -72,7 +72,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} alt="" image={image3.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image3.childImageSharp.gatsbyImageData} />
                     </div>
                     <div css={css`
                         ${bpMinSM} {
@@ -82,7 +82,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} image={image4.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image4.childImageSharp.gatsbyImageData} />
                     </div>
                     <div css={css`
                         ${bpMinSM} {
@@ -92,7 +92,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} alt="" image={image5.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image5.childImageSharp.gatsbyImageData} />
                     </div>
                     <div css={css`
                         ${bpMinSM} {
@@ -102,7 +102,7 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
                         <GatsbyImage css={css`
                             border-radius: 1em;
                             overflow: hidden;
-                        `} alt="" image={image6.childImageSharp.gatsbyImageData} />
+                        `} alt={""} image={image6.childImageSharp.gatsbyImageData} />
                     </div>
                 </Slider>
             </Container>
@@ -122,18 +122,12 @@ export const pageQuery = graphql`
     mdx(frontmatter: {type: { eq: "about" }}) {
       id
       body
-      timeToRead
       frontmatter {
         title
         description
         date
         author
         slug
-        banner {
-            childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
-            }
-        }
       }
     }
     image1: file(relativePath: { eq: "about06.jpg" }) {

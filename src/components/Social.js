@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from './Link'
+import { Link } from 'gatsby'
 import { useTheme } from './Theming'
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import config from '../../config/website'
 
 export const Twitter = ({ url = `${config.twitter}` }) => {
@@ -17,6 +17,7 @@ export const Twitter = ({ url = `${config.twitter}` }) => {
         }
       `}
       aria-label="Visit my Twitter"
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +48,7 @@ export const LinkedIn = ({ url = `${config.linkedin}` }) => {
         }
       `}
       aria-label="Visit my LinkedIn"
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +78,7 @@ export const GitHub = ({ url = `${config.github}` }) => {
         }
       `}
       aria-label="Visit my GitHub"
+      target="_blank"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

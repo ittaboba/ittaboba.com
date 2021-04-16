@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/SEO"
-import { css } from '@emotion/core'
+import Seo from "../components/seo"
+import { css } from '@emotion/react'
 
 import Layout from "../components/Layout"
 import { bpMaxMD, bpMaxSM } from "../lib/breakpoints"
@@ -16,7 +16,7 @@ export default function Blog({data}) {
 
     return (
       <Layout>
-        <SEO 
+        <Seo 
           title={title}
           description={subtitle}
           path={"/blog"}

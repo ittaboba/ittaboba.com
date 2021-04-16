@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import Card from "./Card"
 import { Link } from "gatsby"
 import { bpMinMD } from "../lib/breakpoints"

@@ -1,9 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { lighten } from 'polished'
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import { ThemeProvider, themes } from './Theming'
-import { bpMaxSM } from '../lib/breakpoints'
 import Header from './Header'
 import Footer from '../components/Footer'
 
@@ -53,6 +52,9 @@ const getGlobalStyles = theme => {
         text-decoration: underline;
       }
     }
+    figure {
+      margin: 0 0 1rem;
+    },
     h1,
     h2,
     h3,
@@ -67,34 +69,13 @@ const getGlobalStyles = theme => {
           color: ${theme.colors.text};
         }
       }
-      line-height: 1.2;
-    }
-    ${bpMaxSM} {
-      p,
-      em,
-      strong {
-        font-size: 90%;
-      }
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 24px;
-      }
+      line-height: 1.4;
     }
     hr {
       margin: 50px 0;
       border: none;
       border-top: 1px solid ${theme.colors.gray};
       background: none;
-    }
-    em {
-      font-family: "Helvetica";
-    }
-    strong {
-      em {
-        font-family: "Helvetica";
-      }
     }
     input {
       border-radius: 4px;
@@ -151,7 +132,7 @@ const getGlobalStyles = theme => {
   `
 }
 
-export default ({
+const Layout = ({
   children
 }) => {
   const initializeTheme = () => {
@@ -207,7 +188,8 @@ export const pageQuery = graphql`
       author {
         name
       }
-      keywords
     }
   }
 `
+
+export default Layout

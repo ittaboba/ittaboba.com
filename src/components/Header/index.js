@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { useTheme } from '../Theming'
 import { bpMaxSM, bpMaxMD } from '../../lib/breakpoints'
 import MobileMenu from './MobileMenu'
@@ -44,8 +44,10 @@ const Header = () => {
               font-size: 16px;
               font-weight: bold;
               color: ${theme.colors.text};
+              text-decoration: none;
               &:hover {
-                color: ${theme.colors.text};
+                text-decoration: none;
+                color: ${theme.colors.red};
               }
             `} to="/">
               <div css={css`

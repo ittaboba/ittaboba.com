@@ -54,7 +54,8 @@ export const pageQuery = graphql`
   query projectsIndex {
     allMdx(
       filter: {frontmatter: {type: { eq: "project" } } }
-      sort: { fields: [frontmatter___date], order: DESC }) {
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           id

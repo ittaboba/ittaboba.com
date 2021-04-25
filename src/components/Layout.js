@@ -38,8 +38,8 @@ const getGlobalStyles = theme => {
       line-height: 1.6em;
     }
     &::selection {
-      color: ${theme.colors.white};
-      background-color: ${theme.colors.primary};
+      color: ${theme.colors.primary};
+      background-color: ${theme.colors.text};
     }
     a {
       color: ${theme.colors.link};

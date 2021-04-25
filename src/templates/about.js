@@ -38,10 +38,10 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
     return (
         <Layout>
             <Seo 
-                title={mdx.frontmatter.title}
-                description={mdx.frontmatter.description}
-                image={image1.childImageSharp.gatsbyImageData.images.fallback.src}
-                path={`/${mdx.frontmatter.slug}`} />
+            title={mdx.frontmatter.title}
+            description={mdx.frontmatter.description}
+            image={image1.childImageSharp.gatsbyImageData.images.fallback.src}
+            path={`/${mdx.frontmatter.slug}`} />
             <Container>
                 <Slider {...settings}>
                     <div css={css`
@@ -118,8 +118,10 @@ export default function About({data:{mdx, image1, image2, image3, image4, image5
 }
 
 export const pageQuery = graphql`
-  query AboutPostQuery {
-    mdx(frontmatter: {type: { eq: "about" }}) {
+  query AboutPostQuery($id: String) {
+    mdx(
+        id: { eq: $id }
+    ) {
       id
       body
       frontmatter {

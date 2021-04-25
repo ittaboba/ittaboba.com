@@ -17,9 +17,9 @@ export default function Blog({data}) {
     return (
       <Layout>
         <Seo 
-          title={title}
-          description={subtitle}
-          path={"/blog"}
+            title={title}
+            description={subtitle}
+            path={"/blog"}
         />
         <Container noVerticalPadding>
           <h1 css={css`
@@ -54,7 +54,8 @@ export const pageQuery = graphql`
   query blogIndex {
     allMdx(
       filter: {frontmatter: {type: { eq: "blog" } } }
-      sort: { fields: [frontmatter___date], order: DESC }) {
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           id

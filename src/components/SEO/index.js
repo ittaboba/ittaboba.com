@@ -70,7 +70,6 @@ Seo.propTypes = {
   title: PropTypes.string, 
   description: PropTypes.string, 
   image: PropTypes.string, 
-  keywords: PropTypes.array
 }
 
 Seo.defaultProps = {

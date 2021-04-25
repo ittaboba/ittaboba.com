@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { css } from '@emotion/react'
 import Seo from "../components/seo"
+import config from "../../config/website"
 
 import components from "../components/mdx"
 import Layout from "../components/Layout"
@@ -55,13 +56,20 @@ export default function Post({data:{mdx}}) {
                             font-size: 40px;
                         }
                     `}>{mdx.frontmatter.title}</h1>
-                    <p css={css`
+                    <section css={css`
+                        padding: 0px 20px;
                         font-weight: 500;
+                        max-width: 450px;
+                        margin-left: auto;
+                        margin-right: auto;
                         ${bpMinSM} {
                             font-size: 16px;
                         }
                         ${bpMinMD} {
                             font-size: 18px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
                         }
                         ${bpMinLG} {
                             font-size: 18px;
@@ -70,15 +78,22 @@ export default function Post({data:{mdx}}) {
                             font-size: 18px;
                         }
                     `}>
-                        <Link to="/">
+                        <Link to={`${config.twitter}`} target="_blank">
                             {`${mdx.frontmatter.author}`}
                         </Link>
-                        {` ∙ Reading time: ${mdx.timeToRead} minutes`}
-                    </p>
+                        <div>
+                            <time dateTime={`${mdx.frontmatter.dateTime}`}>
+                                {
+                                    mdx.frontmatter.published
+                                }
+                            </time>
+                            {` ∙ ${mdx.timeToRead} min read`}
+                        </div>
+                        
+                    </section>
                 </div>
             </div>
             </div>
-            
             <article>
                 <div css={css`
                     padding: 0px 20px;
@@ -91,25 +106,23 @@ export default function Post({data:{mdx}}) {
                     </MDXProvider>
                 </div>
             </article>
-            <div style={{textAlign: "center"}}>
-                <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                    Written with <span role="img" aria-label="heart emoji">❤️</span> using my&nbsp;<Link className="GemsLink" to="https://gemsnotes.app/" target="_blank">Gems</Link>&nbsp;notes
-                </div>
-            </div>
         </Layout>
     )
 }
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
+    mdx(
+        id: { eq: $id }
+    ) {
       id
       body
       timeToRead
       frontmatter {
         title
         description
-        date
+        dateTime: date
+        published: date(formatString: "MMM D, YYYY")
         author
         slug
         banner {

@@ -8,7 +8,7 @@ import Container from '../components/Container'
 import {  bpMinMD } from "../lib/breakpoints"
 import Cards from '../components/Cards'
 import Seo from '../components/seo'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const Hero = () => {
   const theme = useTheme()
@@ -118,10 +118,14 @@ export default function Index({data}) {
             max-width: 750px;
             margin: 0 auto;
             padding: 20px;
+            font-size: 20px;
+            line-height: 1.6;
           `}>
-          {/* Hello, I am Lorenzo. Here’s my personal journey so far. I have spent almost a decade making projects and learning how to build solutions. It was fun and I enjoyed every second of it. Now I am focusing on how to find problems worth solving. Once I will have these mental models, I will be finally ready to make a living doing what I love. I am building a networked bookmarking and note-taking app called Gems.  */}
-          Hello, I am Lorenzo. I write about 
-          Aenean fringilla sapien vitae maximus lobortis. Vivamus luctus purus nisi. Aenean quis ipsum turpis. Ut ut rutrum orci. Duis in mi lacus. Nullam rhoncus at nulla eu aliquam. Curabitur vitae augue justo.
+            Hello, I am <Link to="/about">Lorenzo</Link>.
+            I've been writing code for over 10 years (professionally for three and a half of those).
+            Recently, I've started writing about systematic creativity, ethical technology, and personal growth too.
+            I am bootstrapping a SaaS called <Link to="https://gemsnotes.app/" target="_blank" rel="noopener noreferrer">Gems</Link> to deal with information overload.
+            I like learning and building in public by sharing my <Link to="/blog">discoveries</Link> and <Link to="/projects">side-projects</Link>.
         </p>
         <Container>
           <h1>

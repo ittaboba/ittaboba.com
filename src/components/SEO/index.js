@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import config from '../../../config/website'
 
 const Seo = ({ title, description, image, path, isBlogPost }) => (
   <StaticQuery
@@ -14,6 +13,7 @@ const Seo = ({ title, description, image, path, isBlogPost }) => (
             description
             canonicalUrl
             image
+            twitterHandle
             author {
               name
             }
@@ -36,27 +36,27 @@ const Seo = ({ title, description, image, path, isBlogPost }) => (
             <Helmet>
               {/* General tags */}
               <html lang="en"></html>
-              <title>{title}</title>
+              <title>{title ? title : seo.title}</title>
 
               <link rel="canonical" key={canonical} href={canonical} data-react-helmet="true" />
 
-              <meta name="description" content={description} />
-              <meta name="image" content={`${seo.canonicalUrl}${image}`} />
+              <meta name="description" content={description ? description : seo.description} />
+              <meta name="image" content={`${seo.canonicalUrl}${image ? image : seo.image}`} />
 
               {/* OpenGraph tags */}
               <meta property="og:url" content={canonical} />
               {isBlogPost ? <meta property="og:type" content="article" /> : null}
-              <meta property="og:site_name" content={seo.title} />
-              <meta property="og:title" content={title} />
-              <meta property="og:description" content={description} />
-              <meta property="og:image" content={`${seo.canonicalUrl}${image}`} />
+              <meta property="og:site_name" content={seo.organization.name} />
+              <meta property="og:title" content={title ? title : seo.title} />
+              <meta property="og:description" content={description ? description : seo.description} />
+              <meta property="og:image" content={`${seo.canonicalUrl}${image ? image : seo.image}`} />
 
               {/* Twitter Card tags */}
               <meta name="twitter:card" content="summary_large_image" />
-              <meta name="twitter:creator" content={seo.social.twitter} />
-              <meta name="twitter:title" content={title} />
-              <meta name="twitter:description" content={description} />
-              <meta name="twitter:image" content={`${seo.canonicalUrl}${image}`} />
+              <meta name="twitter:creator" content={seo.twitterHandle} />
+              <meta name="twitter:title" content={title ? title : seo.title} />
+              <meta name="twitter:description" content={description ? description : seo.description} />
+              <meta name="twitter:image" content={`${seo.canonicalUrl}${image ? image : seo.image}`} />
             </Helmet>
           </React.Fragment>
         )
@@ -73,10 +73,7 @@ Seo.propTypes = {
 }
 
 Seo.defaultProps = {
-  isBlogPost: false,
-  title: config.siteTitle,
-  description: config.siteDescription,
-  image: config.siteImage
+  isBlogPost: false
 }
 
 export default Seo

@@ -1,31 +1,25 @@
-const config = require('./config/website')
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
-  pathPrefix: config.pathPrefix,
+  pathPrefix: "/", 
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
-    title: config.siteTitle,
-    twitterHandle: config.twitterHandle,
-    description: config.siteDescription,
-    canonicalUrl: config.siteUrl,
-    image: config.siteImage,
+    siteUrl: "https://ittaboba.com",
+    title: "Lorenzo Bernaschina\'s Website",
+    twitterHandle: "@ittaboba",
+    description: "Personal website where I share my journey, discoveries, and projects",
+    canonicalUrl: "https://ittaboba.com",
+    image: "/images/logo.jpg",
     author: {
-      name: config.author,
+      name: "Lorenzo Bernaschina",
       minibio: ``,
     },
     organization: {
-      name: config.organization,
-      url: config.siteUrl,
-      logo: config.siteImage,
+      name: "ittaboba.com",
+      url: "https://ittaboba.com",
+      logo: "/images/logo.jpg",
     },
     social: {
-      twitter: config.twitterHandle,
-      fbAppID: '',
+      twitter: "https://twitter.com/ittaboba/",
+      github: 'https://github.com/ittaboba',
+      linkedin: 'https://www.linkedin.com/in/lorenzo-bernaschina-669a08b9/'
     },
   },
   plugins: [
@@ -100,12 +94,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        name: "Lorenzo Bernaschina\'s Website",
+        short_name: "Lorenzo\'s Blog",
+        description: "Personal website where I share my journey, discoveries, and projects",
+        start_url: "/",
+        // background_color: config.backgroundColor,
+        // theme_color: config.themeColor,
         display: 'standalone',
         icons: [
           {

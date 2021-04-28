@@ -2,17 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { css } from '@emotion/react'
 import Seo from "../components/seo"
-import config from "../../config/website"
 
 import components from "../components/mdx"
 import Layout from "../components/Layout"
 import { bpMinLG, bpMinMD, bpMinSM, bpMinXL } from "../lib/breakpoints"
 
-export default function Post({data:{mdx}}) {
+export default function Post({data:{mdx, site}}) {
     return (
         <Layout>
             <Seo 
@@ -78,9 +76,9 @@ export default function Post({data:{mdx}}) {
                             font-size: 18px;
                         }
                     `}>
-                        <Link to={`${config.twitter}`} target="_blank">
+                        <a href={`${site.siteMetadata.social.twitter}`} target="_blank" rel="noopener noreferrer">
                             {`${mdx.frontmatter.author}`}
-                        </Link>
+                        </a>
                         <div>
                             <time dateTime={`${mdx.frontmatter.dateTime}`}>
                                 {
@@ -112,6 +110,13 @@ export default function Post({data:{mdx}}) {
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
+    site {
+        siteMetadata {
+            social {
+                twitter
+            }
+        }
+    }
     mdx(
         id: { eq: $id }
     ) {

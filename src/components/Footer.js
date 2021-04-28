@@ -3,9 +3,24 @@ import { css } from '@emotion/react'
 import { Twitter, GitHub, LinkedIn } from './Social'
 import Container from './Container'
 import { bpMaxXS } from '../lib/breakpoints'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const Footer = () => (
-  <footer>
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          social {
+            twitter
+            linkedin
+            github
+          }
+        }
+      }
+    }
+  `)
+
+  return <footer>
     <Container>
       <div css={css`
           display: flex;
@@ -19,13 +34,13 @@ const Footer = () => (
           }
         `}>© Lorenzo Bernaschina's Website 2021</section>
         <nav>
-          <Twitter />
-          <LinkedIn />
-          <GitHub />
+          <Twitter url={data.site.siteMetadata.social.twitter} />
+          <LinkedIn url={data.site.siteMetadata.social.linkedin} />
+          <GitHub url={data.site.siteMetadata.social.github} />
         </nav>
       </div>
     </Container>
   </footer>
-)
+}
 
 export default Footer

@@ -32,7 +32,7 @@ const Footer = () => {
           ${bpMaxXS} {
             font-size: 10px;
           }
-        `}>© Lorenzo Bernaschina's Website 2021</section>
+        `}>© Lorenzo Bernaschina's Website 2022</section>
         <nav>
           <Twitter url={data.site.siteMetadata.social.twitter} />
           <LinkedIn url={data.site.siteMetadata.social.linkedin} />

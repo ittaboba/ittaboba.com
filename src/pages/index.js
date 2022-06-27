@@ -123,7 +123,7 @@ export default function Index({data}) {
           `}>
             Hello, I am <Link to="/about">Lorenzo</Link>.
             I've been writing code for over 10 years (professionally for three and a half of those).
-            I am currently building a SaaS called <a href="https://gemsnotes.app/" target="_blank" rel="noopener noreferrer">Gems</a> to deal with information overload.
+            I am currently building a SaaS called <a href="/article/gems" target="_blank" rel="noopener noreferrer">Gems</a> to deal with information overload.
             I like learning and building in public by sharing my <Link to="/blog">discoveries</Link> and <Link to="/projects">side-projects</Link>.
         </p>
         <Container>
